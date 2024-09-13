@@ -4,10 +4,6 @@ iatest=$(expr index "$-" i)
 #######################################################
 # SOURCED ALIAS'S AND SCRIPTS BY zachbrowne.me
 #######################################################
-if [ -f /usr/bin/fastfetch ]; then
-	fastfetch
-fi
-
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
@@ -518,6 +514,7 @@ lazyg() {
 if [[ $- == *i* ]]; then
     # Bind Ctrl+f to insert 'zi' followed by a newline
     bind '"\C-f":"zi\n"'
+    fastfetch
 fi
 
 export PATH=$PATH:"$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bin:/.local/share/flatpak/exports/bin"
